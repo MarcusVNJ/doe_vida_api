@@ -1,0 +1,138 @@
+databaseChangeLog:
+    - changeSet:
+          id: 1
+          author: Marcus Norberto
+          changes:
+              - createTable:
+                    tableName: endereco
+                    columns:
+                        - column:
+                              name: id
+                              type: BIGINT
+                              autoIncrement: true
+                              constraints:
+                                  primaryKey: true
+                                  nullable: false
+                        - column:
+                              name: cep
+                              type: VARCHAR(10)
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: descricao
+                              type: VARCHAR(255)
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: numero
+                              type: SMALLINT
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: bairro
+                              type: VARCHAR(100)
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: cidade
+                              type: VARCHAR(100)
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: estado
+                              type: VARCHAR(100)
+                              constraints:
+                                  nullable: false
+
+    - changeSet:
+          id: 2
+          author: Marcus Norberto
+          changes:
+              - createTable:
+                    tableName: pessoa
+                    columns:
+                        - column:
+                              name: id
+                              type: BIGINT
+                              autoIncrement: true
+                              constraints:
+                                  primaryKey: true
+                                  nullable: false
+                        - column:
+                              name: nome
+                              type: VARCHAR(255)
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: cpf
+                              type: VARCHAR(14)
+                              constraints:
+                                  nullable: false
+                                  unique: true
+                        - column:
+                              name: rg
+                              type: VARCHAR(20)
+                              constraints:
+                                  nullable: true
+                        - column:
+                              name: data_nascimento
+                              type: DATE
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: genero
+                              type: VARCHAR(100)
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: mae
+                              type: VARCHAR(255)
+                              constraints:
+                                  nullable: true
+                        - column:
+                              name: pai
+                              type: VARCHAR(255)
+                              constraints:
+                                  nullable: true
+                        - column:
+                              name: email
+                              type: VARCHAR(255)
+                              constraints:
+                                  nullable: true
+                        - column:
+                              name: endereco_id
+                              type: BIGINT
+                              constraints:
+                                  nullable: false
+                                  foreignKeyName: fk_pessoa_endereco
+                                  references: endereco(id)
+                        - column:
+                              name: telefone
+                              type: VARCHAR(20)
+                              constraints:
+                                  nullable: true
+                        - column:
+                              name: celular
+                              type: VARCHAR(20)
+                              constraints:
+                                  nullable: true
+                        - column:
+                              name: altura
+                              type: FLOAT
+                              constraints:
+                                  nullable: true
+                        - column:
+                              name: peso
+                              type: FLOAT
+                              constraints:
+                                  nullable: true
+                        - column:
+                              name: tipo_sanguineo
+                              type: VARCHAR(12)
+                              constraints:
+                                  nullable: true
+                        - column:
+                              name: idade
+                              type: SMALLINT
+                              constraints:
+                                  nullable: true

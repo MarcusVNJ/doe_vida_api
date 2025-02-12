@@ -1,0 +1,66 @@
+# Arquivos gerados pelo Maven
+target/
+*.war
+*.jar
+*.ear
+*.zip
+*.gz
+
+# Arquivos gerados pelo Gradle
+.gradle/
+build/
+*.war
+*.jar
+*.ear
+*.zip
+*.gz
+
+# Dependências
+.idea/libraries/ # Se usar o IntelliJ IDEA
+.eclipse/ # Se usar o Eclipse
+
+# Arquivos de configuração do Spring Tool Suite
+.sts/
+
+# Logs
+*.log
+*.out
+*.err
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.ipr
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# NetBeans
+nbproject/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*~
+#*
+*.swp
+
+# Arquivos de backup
+*.bak
+*.tmp
+
+# Arquivos de cache
+.cache/
+
+# Senhas e chaves
+*.key
+*.pem
+*.p12
+
+# Informações sensíveis
+*.env
